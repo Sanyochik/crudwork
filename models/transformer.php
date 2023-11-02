@@ -8,6 +8,9 @@
 
 class transformer
 {
+	/**
+	 * function for get age or work expirience
+	 */
 	public function getyears($date){
 		$birthDate = explode("-", $date);
   		$result = (date("md", date("U", mktime(0, 0, 0, $birthDate[1], $birthDate[2], $birthDate[0]))) > date("md")
@@ -15,6 +18,9 @@ class transformer
     	: (date("Y") - $birthDate[0]));
     	return $result;
 	}
+	/**
+	 * function for make correct insert request
+	 */
 	public function makeinsert(){
 		$rows='(';
 		$values='(';
@@ -33,6 +39,9 @@ class transformer
 		$values.=')';
 		return array($rows,$values);
 	}
+	/**
+	 * function for export excel
+	 */
 	public function makeexcel($array){
 		header("Content-Disposition: attachment; filename=\"export.csv\"");
 		header("Content-Type: application/vnd.ms-excel;");
@@ -46,6 +55,9 @@ class transformer
 		}
 		fclose($out);
 	}
+	/**
+	 * function for make correct update request
+	 */
 	public function makeupdate(){
 		$replace='';
 		$first=0;

@@ -1,11 +1,27 @@
 <?php
+//code made by Alexandr
+//created at 1.11.2023
+//updated at 1.11.2023
+/**
+ * controller class
+ * connect models
+ */
 require_once($_SERVER['DOCUMENT_ROOT'].'/models/db.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/models/transformer.php');
 require_once($_SERVER['DOCUMENT_ROOT'].'/models/auth.php');
+/**
+* create controller class
+*/
 class controller {
+	/**
+	* create redirect function
+	*/
 	public function Redirect($url){
 		header('Location:'.$url.'');
 	}
+	/**
+	* create function for display index page
+	*/
 	public function Index($table,$order='',$by=''){
 		$model= new db();
 		$transformmodel= new transformer();
@@ -62,6 +78,9 @@ class controller {
 			require_once($_SERVER['DOCUMENT_ROOT'].'/views/index.php');
 		}
 	}
+	/**
+	* create function for update info
+	*/
 	public function Update($table,$redact){
 		$model= new db();
 		$transformmodel= new transformer();
@@ -76,11 +95,17 @@ class controller {
 			require_once($_SERVER['DOCUMENT_ROOT'].'/views/form.php');
 		}
 	}
+	/**
+	* create function for delete info
+	*/
 	public function Delete($table,$delete){
 		$model= new db();
 		$model->atherActions("DELETE from ".$table." where id = $delete ");
 		$this->Redirect('index.php?cont=index&table='.$table.'');
 	}
+	/**
+	* create function for authentification
+	*/
 	public function Login(){
 		$model= new auth();
 		if(!empty($_POST)){
@@ -89,10 +114,16 @@ class controller {
 			require_once($_SERVER['DOCUMENT_ROOT'].'/views/login.php');
 		}
 	}
+	/**
+	* create function for logout
+	*/
 	public function Logout(){
 		$model= new auth();
 		$model->logout();
 	}
+	/**
+	* create function for insert new row
+	*/
 	public function Insert($table){
 		$model= new db();
 		$transformmodel= new transformer();

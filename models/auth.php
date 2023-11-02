@@ -26,6 +26,9 @@ class auth
 			$this->authentification('fnjklzxcjirhiyauwandskjbhcda');
 		}
 	}
+	/**
+	* function for logout
+	*/
 	public function logout(){
 		$_SESSION['token']='';
 		header('Location:index.php');

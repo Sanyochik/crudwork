@@ -1,3 +1,11 @@
+<?php
+//code made by Alexandr
+//created at 1.11.2023
+//updated at 1.11.2023
+/**
+ * create header for site
+ */
+?>
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../styles/styles.css">

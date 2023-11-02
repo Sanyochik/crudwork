@@ -1,4 +1,10 @@
 <?php
+//code made by Alexandr
+//created at 31.10.2023
+//updated at 1.11.2023
+/**
+ * file initialization controller
+ */
 session_start();
 require_once('controllers/controller.php');
 $controller = new controller();

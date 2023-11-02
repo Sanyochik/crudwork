@@ -1,4 +1,11 @@
 <?php
+//code made by Alexandr
+//created at 1.11.2023
+//updated at 1.11.2023
+/**
+ * view for form to work with crud
+ * add header
+ */
 	require_once($_SERVER['DOCUMENT_ROOT'].'/views/header.php');
 ?>
 <form method="POST" action="index.php?cont=<?php echo $_GET['cont'];?>&table=<?php echo $_GET['table'];?><?php if(!empty($_GET['redact'])){echo '&redact='.$_GET["redact"].'';}?>">

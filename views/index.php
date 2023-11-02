@@ -1,4 +1,11 @@
 <?php
+//code made by Alexandr
+//created at 31.10.2023
+//updated at 31.10.2023
+/**
+ * view for table
+ * add header
+ */
 	require_once($_SERVER['DOCUMENT_ROOT'].'/views/header.php');
 ?>
 <table>

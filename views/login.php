@@ -1,3 +1,11 @@
+<?php
+//code made by Alexandr
+//created at 1.11.2023
+//updated at 1.11.2023
+/**
+ * form for authentification
+ */
+?>
 <form method="POST" action="index.php">
 	<label>Login<br><input name="username" type="text"></label><br>
 	<label>Password<br><input name="password" type="password"></label><br>
