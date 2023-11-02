@@ -1,0 +1,13 @@
+th{
+	border: 1px solid gray;
+}
+td{
+	border: 1px solid gray;
+}
+nav{
+	background-color:black;
+	height: 50px;
+	width:100%;
+	text-align: left;
+	vertical-align: middle;
+}
